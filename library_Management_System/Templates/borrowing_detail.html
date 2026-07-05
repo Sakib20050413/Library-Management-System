@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Borrowing Details</h2>
+    <p><strong>Member:</strong> {{ record.member.name }}</p>
+    <p><strong>Book:</strong> {{ record.book.title }}</p>
+    <p><strong>Borrowed On:</strong> {{ record.borrow_date }}</p>
+    <p><strong>Returned On:</strong> {% if record.return_date %}{{ record.return_date }}{% else %}<span style="color:red;">Not Returned Yet</span>{% endif %}</p>
+    <a href="/borrowing/">🔙 Back to Records</a>
+{% endblock %}

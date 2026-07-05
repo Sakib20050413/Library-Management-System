@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Book Catalog</h2>
+    <ul>
+        {% for book in books %}
+            <li><a href="/books/{{ book.id }}/">{{ book.title }}</a> - <em>{{ book.status }}</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
